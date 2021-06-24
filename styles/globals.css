@@ -1,16 +1,21 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@layer components {
+  .title {
+    @apply ml-4 sm:ml-8 lg:ml-4;
+  }
 
-* {
-  box-sizing: border-box;
+  .split-button {
+    @apply px-6 py-2 cursor-pointer border border-blue-outline focus:outline-none w-full first:ml-8 last:mr-8 first:rounded-l-lg last:rounded-r-lg;
+  }
+
+  .percent-button {
+    @apply text-blue-outline px-2 py-1 cursor-pointer border border-blue-outline focus:outline-none sm:text-sm text-xs w-full first:ml-8 last:mr-8 first:rounded-l-md last:rounded-r-md;
+  }
+
+  .button {
+    @apply w-1/2 px-6 py-2 cursor-pointer font-semibold border border-yellow-primary bg-yellow-primary rounded-lg focus:outline-none;
+  }
 }
